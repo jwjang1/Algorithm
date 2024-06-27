@@ -29,7 +29,6 @@ graph=[
     [1,7] 
 ]
 
-
 visited =[False]*9
 
 first_node = 1
