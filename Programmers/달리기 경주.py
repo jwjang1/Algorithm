@@ -1,7 +1,12 @@
 def solution(players, callings):
-    for i in range(len(callings)):
-        n = players.index(callings[i])
+    player = {player: i for i, player in enumerate(players)}
+
+    for call in callings:
+        n = player[call]
         players[n], players[n-1] = players[n-1], players[n]
+
+        player[players[n]] = n
+        player[players[n-1]] = n-1
     return players
 
 players = ["mumu", "soe", "poe", "kai", "mine"]
